@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grab Food</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #00b14f;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        display: flex;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+
+      .menu-container {
+        position: relative;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .menu a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .menu a:hover {
+        background-color: #ddd;
+      }
+
+      .menu-container:hover .menu {
+        display: block;
+      }
+
+      .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .product-card {
+        width: 300px;
+        margin: 20px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      .product-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .product-details {
+        padding: 20px;
+      }
+
+      .product-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .product-price {
+        font-size: 16px;
+        color: #00b14f;
+        margin-bottom: 10px;
+      }
+
+      .product-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .product-button {
+        background-color: #00b14f;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Grab Food</h1>
+      <nav>
+        <div class="menu-container">
+          <a>Menu</a>
+          <div class="menu">
+            <a>Makanan</a>
+            <a>Minuman</a>
+            <a>Promo</a>
+          </div>
+        </div>
+        <a>Keranjang</a>
+        <a>Akun</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="product-container">
+        <!-- Makanan -->
+        <div class="product-card">
+          <img src="nasi_goreng.jpg" alt="Nasi Goreng" class="product-image" />
+          <div class="product-details">
+            <h3 class="product-name">Nasi Goreng</h3>
+            <p class="product-price">Rp 15.000</p>
+            <p class="product-description">
+              Nasi goreng dengan ayam, telur, dan sayuran segar.
+            </p>
+            <button class="product-button">Tambah ke Keranjang</button>
+          </div>
+        </div>
+
+        <!-- Minuman -->
+        <div class="product-card">
+          <img src="teh_tarik.jpg" alt="Teh Tarik" class="product-image" />
+          <div class="product-details">
+            <h3 class="product-name">Teh Tarik</h3>
+            <p class="product-price">Rp 5.000</p>
+            <p class="product-description">
+              Teh manis dengan campuran susu yang lembut.
+            </p>
+            <button class="product-button">Tambah ke Keranjang</button>
+          </div>
+        </div>
+
+        <!-- Promo -->
+        <div class="product-card">
+          <img src="paket_hemat.jpg" alt="Paket Hemat" class="product-image" />
+          <div class="product-details">
+            <h3 class="product-name">Paket Hemat</h3>
+            <p class="product-price">Rp 25.000</p>
+            <p class="product-description">
+              Nasi goreng, teh tarik, dan cemilan seharga Rp 25.000.
+            </p>
+            <button class="product-button">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
